@@ -25,6 +25,7 @@ console.log(startDefine);
 
 
 // ВАРИАНТ РЕШЕНИЯ ЧЕРЕЗ IF
+debugger;
 if(operation === "*"){
     result++;
     for(j = 1; j < operand.length;j++){
@@ -37,8 +38,9 @@ if(operation === "*"){
     }
     alert(`Результат операции: ${result}`)
 }else if(operation === "-") {
-    for(j = 1; j < operand.length;j++){
-        result = +operand[1] - +operand[j];
+    result = startDefine;
+    for(j = 2; j < operand.length;j++){
+        result -=  +operand[j];
     }
     alert(`Результат операции: ${result}`)
 }else if (operation === "/") {
