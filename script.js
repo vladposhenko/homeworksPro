@@ -9,32 +9,37 @@ let tuesday = [
     ['A whole lot of nothing',240]
 ];
 
-let someArray = monday.concat(tuesday);
+let allTasks = monday.concat(tuesday)
+    .map(
+        function (task) {
+            task[1] /= 60
+            return task
+        }
+)
+    .filter(
+        function(task) {
+            return task[1] > 2;
+        }
+)
 
-console.log(someArray);
-let anotherArray = []
-someArray.filter( (task) => {
-    task[1] /= 60;
-    if (task[1] > 2) anotherArray.push(task)
-    return anotherArray;
-})
-
-anotherArray.forEach((task) => {
-    let salary = task[1] * amount;
-    task.push(salary)
-})
-
-anotherArray.map((task) => {
-    return document.write(`
-        <div style="background-color: aqua;width: 350px; padding: 20px;margin-top: 20px; ">
-          <p style="">Task name:${task[0]}</p>
-          <p style="">Taks duration:${task[1]}</p>
-          <p style="">Task amount:${task[2]}$</p>
-          <button id="done">Done</button>
-        </div>   
-    `)
-
-})
+    .map(
+        function (task) {
+            let salary = task[1] * amount;
+            task.push(salary)
+            return task
+        }
+    )
+    .map(
+        function (task) {
+            return document.write(`
+             <div style="background-color: lime;width: 350px; padding: 20px;margin-top: 20px;margin-left: 37%; ">
+                   <p style="">Task name: ${task[0]}</p>
+                   <p style="">Taks duration: ${task[1]}</p>
+                   <p style="">Task amount: ${task[2]}$</p>
+             </div>
+             `)
+        }
+    )
 
 
 
