@@ -33,9 +33,9 @@ let allTasks = monday.concat(tuesday)
         function (task) {
             return document.write(`
              <div style="background-color: lime;width: 350px; padding: 20px;margin-top: 20px;margin-left: 37%; ">
-                   <p style="">Task name: ${task[0]}</p>
-                   <p style="">Taks duration: ${task[1]}</p>
-                   <p style="">Task amount: ${task[2]}$</p>
+                   <p>Task name: ${task[0]}</p>
+                   <p>Taks duration: ${task[1]}</p>
+                   <p>Task amount: ${task[2]}$</p>
              </div>
              `)
         }
