@@ -55,9 +55,3 @@ Array.prototype.herosRender = function(folder) {
 dcHeroes.herosRender('dc')
 marvelHeroes.herosRender('marvel')
 
-
-
-// console.log(marvelHeroes.herosRender('dc'));
-
-
-
