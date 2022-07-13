@@ -1,0 +1,35 @@
+.table {
+    margin: 0 auto;
+    border: 2px solid #000;
+    padding: 20px;
+    border-collapse: collapse;
+    width: 500px;
+    border-spacing: 10px;
+}
+
+.thead {
+    border: 2px solid #000;
+    padding: 20px;
+}
+
+th {
+    border: 2px solid #000;
+}
+
+tr {
+    text-align: center;
+}
+
+table td {
+    border: 2px solid;
+    
+}
+
+td th {
+    padding: 5px;
+    border: 2px solid #000;
+}
+
+.price {
+    font-weight: 700;
+}
