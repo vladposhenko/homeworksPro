@@ -5,10 +5,10 @@ const roles = {
 };
 
 const gradation = {
-	20: "satisfactory",
-	55: "good",
-	85: "very-good",
-	100: "excellent"
+	20: "Satisfactory",
+	55: "Good",
+	85: "Very-good",
+	100: "Excellent"
 };
 
 
@@ -155,7 +155,7 @@ class Student extends User {
 			this.courses.forEach((course) => {
 				coursesNode.push(`
 					<p class="user__courses--course ${this.role}">
-						${course.title} <span class="${getGradation(course.mark)}">${getGradation(course.mark)}</span>
+						${course.title} <span class="${getGradation(course.mark).toLowerCase()}">${getGradation(course.mark)}</span>
 					</p>
 			`)
 			})
@@ -178,8 +178,8 @@ class Lector extends User {
 				coursesNode.push(`
 					<div class="user__courses--course lector">
 						<p>Title: <b>${course.title}</b></p>
-						<p>Lector's score: <span class="${getGradation(course.score)}">${getGradation(course.score)}</span></p>
-						<p>Average student's score: <span class="${getGradation(course.studentsScore)}">${getGradation(course.studentsScore)}</span></p>
+						<p>Lector's score: <span class="${getGradation(course.score).toLowerCase()}">${getGradation(course.score)}</span></p>
+						<p>Average student's score: <span class="${getGradation(course.studentsScore).toLowerCase()}">${getGradation(course.studentsScore)}</span></p>
 					</div>
 			`)
 			})
@@ -203,7 +203,7 @@ class Admin extends User {
 				coursesNode.push(`
 					<div class="user__courses--course admin">
 						<p>Title: <b>${course.title}</b></p>
-						<p>Admin's score: <span class="${getGradation(course.score)}">${getGradation(course.score)}</span></p>
+						<p>Admin's score: <span class="${getGradation(course.score).toLowerCase()}">${getGradation(course.score)}</span></p>
 					<p>Lector: <b>${course.lector}</b></p>
 					</div>
 			`)
@@ -236,7 +236,7 @@ let usersMarkup = users.map((user) => {
 			`<div class="user">${newUser.render()}<div class="user__courses admin--info"> ${newUser.renderCourses()}</div></div>`
 		)
 	}
-	return usersNode.join("")
+	return usersNode
 })
 
-document.write(`<div class="users">${usersMarkup}</div>`)
+document.write(`<div class="users">${usersMarkup.join("")}</div>`)
