@@ -1,0 +1,20 @@
+body {
+    background-color: burlywood;
+}
+
+.orders {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    color: #fff;
+    flex-wrap: wrap;
+}
+
+.order {
+    background-color: blueviolet;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
