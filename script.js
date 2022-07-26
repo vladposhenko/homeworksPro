@@ -44,7 +44,6 @@ class Hamburger {
     }
 
     addFilling(...filling) {
-        
         addFillingPrice = 0;
         addFillingCalories = 0;
         for(let key in HAMBURGER.filling) {
